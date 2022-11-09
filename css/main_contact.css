@@ -1,0 +1,153 @@
+/* applying 1 style for the whole html */
+html{
+    font-family: 'Poppins', sans-serif;
+    background-color: #C8B3E6;
+}
+/* applying 1 style for the whole html */
+.skip{
+    text-decoration: none;
+    color: #49306B;
+    font-size: 0.8rem;
+}
+
+/* setting width and aligning items in webiste */
+.conatiner{
+    width: 95%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* setting a specfic size for webiste */
+.logo img{
+    width: 150px;
+    padding-top: 10px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* setting width and aligning items in div.head */
+.head{
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+/* applying style to navbar */
+.navbar {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar ul li{
+    list-style-type: none;   
+}
+
+ul{
+    padding: 5px 20px;
+}
+
+.navbar a {
+    color: white;
+    display: block;
+    padding: 0.7rem;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #49306B;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* applying style to horizontal ruler */
+hr{
+    border: 1px white solid;
+}
+
+/* setting a style for text and heading in main section */
+.main-txt,h2{
+    text-align: center;
+    color: white;
+}
+
+.location iframe{
+    width: 100%;
+}
+
+/* applying style to footer */
+.foot{
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+/* breakpooint for desktop view mode */
+@media screen and (min-width: 640px) {
+    /* aligning content in centre and having margin on sides */
+    .container{
+        width: 80%;
+        justify-content: center;
+        margin: auto;
+    }
+
+    /* adds flexbox properties to align items in center */
+    .head{
+        display: flex;
+        align-items: center;
+    }
+
+    /* giving a width to desktop view logo */
+    .logo{
+        width: 25%;
+        margin-bottom: 1rem;
+    }
+
+    /* aligns items in header */
+    header{
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    /* aligning navbar to right of page */
+    .navbar {
+        text-align: right;
+    }
+
+    /* making navbar change to inline navbar */
+    .navbar ul li {
+        display: inline-block;
+        text-decoration: none;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .navbar a {
+        padding: 1.5rem;
+    }
+
+    /* aligning text to left in main section */
+    .main-txt,h2{
+        text-align: left;
+    }
+
+    /* resizing text in grid */
+    .main-txt{
+        width: 100%;
+    }
+
+    /* targeting elements to apply grid on */
+    .location{ grid-area: c1}
+    .main-txt{ grid-area: c2;}
+    
+    /* adding dsplay grid properties */
+    .mainpart{
+        display: grid;
+        grid-template-columns: repeat(2,1fr); 
+        grid-template-areas: 
+        'c1 c2';
+        gap: 1rem;
+    }
+}
